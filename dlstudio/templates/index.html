@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+<link href="../static/content/devs.css" rel="stylesheet"/>
+<link href="../static/content/dlstudio_json.css" rel="stylesheet"/>
+<link href="../static/content/dlstudio_paper.css" rel="stylesheet"/>
+{% block content %}
+
+
+<div id="lib"
+     style="width: 200px; height: 600px;float:left;border-style: solid;	border-color: transparent gray transparent transparent ; ">
+
+    <script src="../static/scripts/dlstudio/lib.js"></script>
+</div>
+
+<div id="paper"
+     style="width: 600px; height: 600px; float:left;	border-style: solid;	border-color: transparent gray transparent transparent ;">
+
+    <script src="../static/scripts/dlstudio/worspace.js"></script>
+</div>
+
+<div id="editor" class="json-editor" style="width: 300px; height: 600px; float:left;">
+
+    <script src="../static/scripts/dlstudio/prop_editor_tree.js"></script>
+
+</div>
+
+<div style="clear:left;"></div>
+{% endblock %}

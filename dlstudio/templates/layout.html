@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }} - DL Studio</title>
+    <link rel="stylesheet" type="text/css" href="/static/content/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/static/content/site.css"/>
+    <script src="/static/scripts/modernizr-2.6.2.js"></script>
+    <link rel="stylesheet" type="text/css" href="../static/scripts/joint-master/dist/joint.css"/>
+
+    <script type=text/javascript>
+    $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+
+
+
+    </script>
+
+    <script src="../static/scripts/joint-master/lib/jquery.js"></script>
+    <script src="../static/scripts/joint-master/lib/lodash.js"></script>
+    <script src="../static/scripts/joint-master/lib/backbone.js"></script>
+
+    <script src="../static/scripts/joint-master/src/core.js"></script>
+    <script src="../static/scripts/joint-master/src/vectorizer.js"></script>
+    <script src="../static/scripts/joint-master/src/geometry.js"></script>
+
+
+    <script src="../static/scripts/joint-master/src/joint.dia.graph.js"></script>
+
+    <script src="../static/scripts/joint-master/src/joint.dia.cell.js"></script>
+    <script src="../static/scripts/joint-master/src/joint.dia.element.js"></script>
+    <script src="../static/scripts/joint-master/src/joint.dia.link.js"></script>
+    <script src="../static/scripts/joint-master/src/joint.dia.paper.js"></script>
+
+    <script src="../static/scripts/joint-master/plugins/joint.shapes.basic.js"></script>
+
+    <script src="../static/scripts/joint-master/plugins/connectors/joint.connectors.normal.js"></script>
+
+    <script src="../static/scripts/joint-master/plugins/joint.shapes.devs.js"></script>
+    <link rel="stylesheet" href="../static/scripts/FlexiJsonEditor-master/jsoneditor.css"/>
+
+
+    <link href="../static/scripts/jsoneditor-master/dist/jsoneditor.min.css" rel="stylesheet" type="text/css">
+    <script src="../static/scripts/jsoneditor-master/dist/jsoneditor.min.js"></script>
+
+
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">DL Studio</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="container body-content">
+    {% block content %}{% endblock %}
+    <hr/>
+    <footer>
+        <p>&copy; {{ year }} - DL Studio</p>
+    </footer>
+</div>
+
+<script src="/static/scripts/jquery-1.10.2.js"></script>
+<script src="/static/scripts/bootstrap.js"></script>
+<script src="/static/scripts/respond.js"></script>
+
+<!--<script src="../static/scripts/joint-master/demo/basic.js"></script>-->
+{% block scripts %}{% endblock %}
+
+</body>
+</html>

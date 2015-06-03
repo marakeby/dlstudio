@@ -1,0 +1,30 @@
+#paper {
+        display: inline-block;
+        border: 3px solid gray;
+    }
+    /* Experimental CSS animation of link connection paths stroke. */
+    .connection {
+        -webkit-animation: draw 3s infinite;
+        -moz-animation: draw 3s infinite;
+        animation: draw 3s infinite;
+        stroke-dashoffset: 10;
+        stroke-dasharray: 5 8;
+    }
+
+    @-webkit-keyframes draw {
+        50% {
+            stroke-dashoffset: 200px;
+        }
+    }
+
+    @-moz-keyframes draw {
+        50% {
+            stroke-dashoffset: 200px;
+        }
+    }
+
+    @keyframes draw {
+        50% {
+            stroke-dashoffset: 200px;
+        }
+    }
